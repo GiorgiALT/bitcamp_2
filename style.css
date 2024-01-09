@@ -1,0 +1,186 @@
+/* Imported Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #F2EAE2;
+}
+
+/* Product Card */
+.product_container {
+    display: flex;
+    flex-direction: column;
+    background-color: #FFF;
+    width: 100%;
+    max-width: 343px;
+    margin: 28px 16px;
+    border-radius: 10px;
+    max-height: 611px;
+}
+
+/* Product Image */
+.product_img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+/* Product Info */
+.product_info {
+    margin: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Perfume */
+.product_info h2 {
+    font-family: var(--sfont);
+    color: var(--scolor);
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14.63px;
+    letter-spacing: 5px;
+}
+
+/* Product Title */
+.product_info h1 {
+    font-family: var(--mfont);
+    color: var(--mcolor);
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 32px;
+    margin-top: 12px;
+}
+
+/* Product Descrption */
+.product_info p {
+    font-family: var(--sfont);
+    color: var(--scolor);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 23px;
+    margin-top: 16px;
+}
+
+/* Price Container Div */
+.price_container {
+    margin: 24px 0 20px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 19px;
+}
+
+/* New Price */
+.new_price {
+    font-family: var(--mfont);
+    color: var(--greencolor);
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 32px;
+}
+
+/* Old Price (Line-Through) */
+.old_price {
+    font-family: var(--sfont);
+    color: var(--scolor);
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 23px;
+    text-decoration: line-through;
+}
+
+/* Button (Add to Cart) */
+button { 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0;
+    gap: 11.61px;
+    font-family: var(--sfont);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17.07px;
+    color: #FFFFFF;
+    background-color: var(--greencolor);
+    border: 0px;
+    border-radius: 8px;
+}
+
+/* Button Hover, The Color Goes Dark */
+button:hover {
+    background-color: var(--dgreencolor);
+}
+
+
+
+
+
+/* Media Query 520px For Desktop */
+@media only screen and (min-width: 520px) {
+
+    /* Product Image */
+    .product_img {
+        /* Image for Desktop */
+        content: url(./images/image-product-desktop.jpg);
+        border-radius: 10px 0 0 10px;
+    }
+
+    /* Product Card */
+    .product_container {
+        flex-direction: row;
+        max-width: 600px;
+        max-height: 450px;
+    }
+
+    /* Product Info */
+    .product_info {
+        max-width: 236px;
+        margin: 32px;
+    }
+
+    /* Product Title */
+    .product_container h1 {
+        margin-top: 20px;
+    }
+
+    /* Product Descrption */
+    .product_container p {
+        margin-top: 24px;
+    }
+
+    /* Price Container Div */
+    .price_container {
+        margin: 30px 0;
+    }
+}
+
+
+
+
+
+
+/* Root Declared Variables */
+:root {
+    /* Fonts */
+    --mfont: "Fraunces";
+    --sfont: "Montserrat";
+
+    /* Colors */
+    --mcolor: #1C232B; /* Gunmetal */
+    --scolor: #6C7289; /* Cream (BG) */
+    --greencolor: #3D8168; /* Deep Aquamarine */
+    --dgreencolor: #1A4032; /* Deep Aquamarine (Dark, Hover) */
+}
